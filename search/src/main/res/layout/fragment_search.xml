@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:paddingHorizontal="16dp"
+    tools:context=".presentation.SearchFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="48dp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/corner_radius_8dp"
+                android:backgroundTint="@color/grey_2"
+                android:drawableStart="@drawable/ic_search_no_active"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/grey_3"
+                android:fontFamily="@font/sf_pro_display_medium"
+                android:gravity="center|left"
+                android:paddingLeft="10dp"
+                android:text="@string/search_title_menu_text"
+                android:textColor="@color/grey_3"
+                android:textSize="16sp" />
+
+            <FrameLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/corner_radius_8dp"
+                android:backgroundTint="@color/grey_2">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_union" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvRecommendation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/sf_pro_display_semibold"
+            android:text="Вакансии для вас"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardFirstVacancy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/grey_1"
+                    app:cardCornerRadius="8dp"
+                    app:contentPadding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Сейчас просматривает "
+                                android:textColor="@color/green"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1"
+                                android:textColor="@color/green"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text=" человек"
+                                android:textColor="@color/green"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/ic_heart_no_active" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:fontFamily="@font/sf_pro_display_medium"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            tools:text="UI/UX Designer" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="@font/sf_pro_display_semibold"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            tools:text="1500-2900 Br" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="@font/sf_pro_display_regular"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            tools:text="Минск" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableEnd="@drawable/ic_verify"
+                            android:drawablePadding="6dp"
+                            android:fontFamily="@font/sf_pro_display_regular"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            tools:text="Мобирикс" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:drawableStart="@drawable/ic_bag"
+                            android:drawablePadding="8dp"
+                            android:fontFamily="@font/sf_pro_display_regular"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            tools:text="Опыт от 1 года до 3 лет" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/sf_pro_display_regular"
+                            android:textColor="@color/grey_3"
+                            android:textSize="14sp"
+                            tools:text="Опубликовано 16 февраля" />
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/btn_respond_first_vacancy"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:layout_marginTop="16dp"
+                            android:backgroundTint="@color/green"
+                            app:cardCornerRadius="50dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/sf_pro_display_regular"
+                                android:text="Откликнуться"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardSecondVacancy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:backgroundTint="@color/grey_1"
+                    app:cardCornerRadius="8dp"
+                    app:contentPadding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Сейчас просматривает "
+                                android:textColor="@color/green"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1"
+                                android:textColor="@color/green"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text=" человек(а)"
+                                android:textColor="@color/green"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/ic_heart_no_active" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:fontFamily="@font/sf_pro_display_medium"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            tools:text="UI/UX Designer" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="@font/sf_pro_display_semibold"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            tools:text="1500-2900 Br" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="@font/sf_pro_display_regular"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            tools:text="Минск" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableEnd="@drawable/ic_verify"
+                            android:drawablePadding="6dp"
+                            android:fontFamily="@font/sf_pro_display_regular"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            tools:text="Мобирикс" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:drawableStart="@drawable/ic_bag"
+                            android:drawablePadding="8dp"
+                            android:fontFamily="@font/sf_pro_display_regular"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            tools:text="Опыт от 1 года до 3 лет" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/sf_pro_display_regular"
+                            android:textColor="@color/grey_3"
+                            android:textSize="14sp"
+                            tools:text="Опубликовано 16 февраля" />
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/btn_respond_second_vacancy"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:layout_marginTop="16dp"
+                            android:backgroundTint="@color/green"
+                            app:cardCornerRadius="50dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/sf_pro_display_regular"
+                                android:text="Откликнуться"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardThirdVacancy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:backgroundTint="@color/grey_1"
+                    app:cardCornerRadius="8dp"
+                    app:contentPadding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Сейчас просматривает "
+                                android:textColor="@color/green"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1"
+                                android:textColor="@color/green"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text=" человек"
+                                android:textColor="@color/green"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/ic_heart_no_active" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:fontFamily="@font/sf_pro_display_medium"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            tools:text="UI/UX Designer" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="@font/sf_pro_display_semibold"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            tools:text="1500-2900 Br" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="@font/sf_pro_display_regular"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            tools:text="Минск" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableEnd="@drawable/ic_verify"
+                            android:drawablePadding="6dp"
+                            android:fontFamily="@font/sf_pro_display_regular"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            tools:text="Мобирикс" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:drawableStart="@drawable/ic_bag"
+                            android:drawablePadding="8dp"
+                            android:fontFamily="@font/sf_pro_display_regular"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            tools:text="Опыт от 1 года до 3 лет" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/sf_pro_display_regular"
+                            android:textColor="@color/grey_3"
+                            android:textSize="14sp"
+                            tools:text="Опубликовано 16 февраля" />
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/btn_respond_third_vacancy"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:layout_marginTop="16dp"
+                            android:backgroundTint="@color/green"
+                            app:cardCornerRadius="50dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/sf_pro_display_regular"
+                                android:text="@string/respond"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/moreVacancy"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="20dp"
+                    android:backgroundTint="@color/blue"
+                    app:cardCornerRadius="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/sf_pro_display_semibold"
+                        android:text="Еще 143 вакансии"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+</FrameLayout>

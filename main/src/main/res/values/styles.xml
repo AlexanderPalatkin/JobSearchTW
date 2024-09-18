@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Стиль для BottomNavigationView -->
+    <style name="BottomNavigationViewStyle" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="itemTextAppearance">@style/BottomNavItemTextAppearance</item>
+        <item name="itemIconTint">@color/nav_item_color</item>
+        <item name="itemTextColor">@color/nav_item_color</item>
+        <item name="labelVisibilityMode">labeled</item>
+    </style>
+
+    <!-- Стиль для текста элементов меню -->
+    <style name="BottomNavItemTextAppearance">
+        <item name="android:textColor">@color/nav_item_color</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:fontFamily">@font/sf_pro_display_regular</item>
+    </style>
+</resources>

@@ -1,0 +1,6 @@
+package com.example.jobsearchtw.favorites.presentation
+
+import com.example.jobsearchtw.base.presentation.BaseFragment
+import com.example.jobsearchtw.favorites.databinding.FragmentFavoriteVacancyBinding
+
+class FavoriteVacancyFragment : BaseFragment<FragmentFavoriteVacancyBinding>(FragmentFavoriteVacancyBinding::inflate)

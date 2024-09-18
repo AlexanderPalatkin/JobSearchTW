@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@id/nav_graph_search"
+        android:icon="@drawable/ic_search_no_active"
+        android:title="Поиск" />
+
+    <item
+        android:id="@id/nav_graph_favorites"
+        android:icon="@drawable/ic_heart_no_active"
+        android:title="Избранное" />
+
+    <item
+        android:id="@id/nav_graph_responses"
+        android:icon="@drawable/ic_responses_no_active"
+        android:title="Отклики" />
+
+    <item
+        android:id="@id/nav_graph_messages"
+        android:icon="@drawable/ic_messages_no_active"
+        android:title="Сообщения" />
+
+    <item
+        android:id="@id/nav_graph_profile"
+        android:icon="@drawable/ic_profile_no_active"
+        android:title="Профиль" />
+
+</menu>

@@ -21,4 +21,12 @@ dependencyResolutionManagement {
 
 rootProject.name = "Job Search TW"
 include(":app")
- 
+include(":core")
+include(":favorites")
+include(":main")
+include(":messages")
+include(":profile")
+include(":responses")
+include(":search")
+include(":uikit")
+include(":base")

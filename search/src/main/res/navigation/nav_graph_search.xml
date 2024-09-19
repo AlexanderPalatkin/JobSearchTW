@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/searchFragment"
-        android:name="com.example.jobsearchtw.search.presentation.SearchFragment"
+        android:name="com.example.jobsearchtw.search.presentation.search.SearchFragment"
         tools:layout="@layout/fragment_search">
         <action
             android:id="@+id/action_searchFragment_to_searchVacancyFragment"
@@ -17,6 +17,6 @@
 
     <fragment
         android:id="@+id/searchVacancyFragment"
-        android:name="com.example.jobsearchtw.search.presentation.SearchAllVacanciesFragment"
+        android:name="com.example.jobsearchtw.search.presentation.search_all_vacancies.SearchAllVacanciesFragment"
         tools:layout="@layout/fragment_search_all_vacancies"/>
 </navigation>

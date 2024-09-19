@@ -1,4 +1,4 @@
-package com.example.jobsearchtw.search.presentation
+package com.example.jobsearchtw.search.presentation.search
 
 import android.os.Bundle
 import android.view.View

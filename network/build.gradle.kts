@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.jobsearchtw.main"
+    namespace = "com.example.jobsearchtw.network"
     compileSdk = 34
 
     defaultConfig {
@@ -42,9 +42,13 @@ dependencies {
     implementation("com.google.dagger:hilt-android:2.48.1")
     ksp("com.google.dagger:hilt-android-compiler:2.48.1")
 
-    //Navigation
-    implementation("androidx.navigation:navigation-fragment-ktx:2.7.7")
-    implementation("androidx.navigation:navigation-ui-ktx:2.7.7")
+    //Retrofit
+    implementation("com.squareup.retrofit2:retrofit:2.11.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.11.0")
+
+    //OkHttp
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
@@ -54,11 +58,5 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 
     //Modules
-    implementation(project(":favorites"))
-    implementation(project(":messages"))
-    implementation(project(":profile"))
-    implementation(project(":responses"))
-    implementation(project(":search"))
-    implementation(project(":uikit"))
-    implementation(project(":base"))
+    implementation(project(":core"))
 }

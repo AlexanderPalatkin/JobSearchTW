@@ -1,57 +1,57 @@
 package com.example.jobsearchtw.network.data.model.dto
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 data class VacancyDTO(
-    @SerializedName("id")
+    @Json(name = "id")
     val id: String,
-    @SerializedName("lookingNumber")
-    val lookingNumber: Int,
-    @SerializedName("title")
+    @Json(name = "lookingNumber")
+    val lookingNumber: Int = 0,
+    @Json(name = "title")
     val title: String,
-    @SerializedName("address")
+    @Json(name = "address")
     val address: AddressDTO,
-    @SerializedName("company")
+    @Json(name = "company")
     val company: String,
-    @SerializedName("experience")
+    @Json(name = "experience")
     val experience: ExperienceDTO,
-    @SerializedName("publishedDate")
+    @Json(name = "publishedDate")
     val publishedDate: String,
-    @SerializedName("isFavorite")
+    @Json(name = "isFavorite")
     val isFavorite: Boolean,
-    @SerializedName("salary")
+    @Json(name = "salary")
     val salary: SalaryDTO,
-    @SerializedName("schedules")
+    @Json(name = "schedules")
     val schedules: List<String>,
-    @SerializedName("appliedNumber")
+    @Json(name = "appliedNumber")
     val appliedNumber: Int?,
-    @SerializedName("description")
+    @Json(name = "description")
     val description: String?,
-    @SerializedName("responsibilities")
+    @Json(name = "responsibilities")
     val responsibilities: String?,
-    @SerializedName("questions")
+    @Json(name = "questions")
     val questions: List<String>
 )
 
 data class AddressDTO(
-    @SerializedName("town")
+    @Json(name = "town")
     val town: String,
-    @SerializedName("street")
+    @Json(name = "street")
     val street: String,
-    @SerializedName("house")
+    @Json(name = "house")
     val house: String
 )
 
 data class ExperienceDTO(
-    @SerializedName("previewText")
+    @Json(name = "previewText")
     val previewText: String,
-    @SerializedName("text")
+    @Json(name = "text")
     val text: String
 )
 
 data class SalaryDTO(
-    @SerializedName("short")
+    @Json(name = "short")
     val short: String?,
-    @SerializedName("full")
+    @Json(name = "full")
     val full: String
 )

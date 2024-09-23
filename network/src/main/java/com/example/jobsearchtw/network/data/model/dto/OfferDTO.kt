@@ -1,19 +1,19 @@
 package com.example.jobsearchtw.network.data.model.dto
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 data class OfferDTO(
-    @SerializedName("id")
+    @Json(name = "id")
     val id: String?,
-    @SerializedName("title")
+    @Json(name = "title")
     val title: String,
-    @SerializedName("link")
+    @Json(name = "link")
     val link: String,
-    @SerializedName("button")
+    @Json(name = "button")
     val button: ButtonDTO?
 )
 
 data class ButtonDTO(
-    @SerializedName("text")
+    @Json(name = "text")
     val text: String
 )

@@ -3,9 +3,7 @@ package com.example.jobsearchtw.network.data.api
 object NetworkParams {
     //API params
     const val BASE_URL = "https://drive.usercontent.google.com/"
-    const val GET_PATH = "u/0/uc"
-    const val ID_PATH = "1z4TbeDkbfXkvgpoJprXbN85uCcD7f00r"
-    const val EXPORT_PATH = "download"
+    const val DOWNLOAD_URL = "https://drive.usercontent.google.com/u/0/uc?id=1z4TbeDkbfXkvgpoJprXbN85uCcD7f00r&export=download"
 
     //Errors
     const val NO_CONNECTION_CODE = -1

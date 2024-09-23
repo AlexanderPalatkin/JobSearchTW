@@ -123,6 +123,7 @@
                         </LinearLayout>
 
                         <TextView
+                            android:id="@+id/company"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="3dp"
@@ -141,6 +142,7 @@
                             tools:text="1500-2900 Br" />
 
                         <TextView
+                            android:id="@+id/country"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"

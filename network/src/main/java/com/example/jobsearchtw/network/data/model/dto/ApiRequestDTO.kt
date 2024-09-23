@@ -1,10 +1,10 @@
 package com.example.jobsearchtw.network.data.model.dto
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 data class ApiRequestDTO(
-    @SerializedName("offers")
+    @Json(name = "offers")
     val offers: List<OfferDTO>,
-    @SerializedName("vacancies")
+    @Json(name = "vacancies")
     val vacancies: List<VacancyDTO>
 )

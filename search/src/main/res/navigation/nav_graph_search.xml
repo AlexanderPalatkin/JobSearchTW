@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_search"
+    app:startDestination="@id/searchFragment">
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.jobsearchtw.search.presentation.search.SearchFragment"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_searchFragment_to_searchAllVacanciesFragment"
+            app:destination="@id/searchAllVacanciesFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_searchVacancyFragment"
+            app:destination="@id/searchVacancyFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/searchVacancyFragment"
+        android:name="com.example.jobsearchtw.search.presentation.search_vacancy.SearchVacancyFragment"
+        tools:layout="@layout/fragment_search_vacancy"/>
+
+    <fragment
+        android:id="@+id/searchAllVacanciesFragment"
+        android:name="com.example.jobsearchtw.search.presentation.search_all_vacancies.SearchAllVacanciesFragment"
+        tools:layout="@layout/fragment_search_all_vacancies">
+        <action
+            android:id="@+id/action_searchAllVacanciesFragment_to_searchVacancyFragment"
+            app:destination="@id/searchVacancyFragment" />
+    </fragment>
+</navigation>

@@ -1,0 +1,10 @@
+<resources>
+    <plurals name="vacancy_count_favorites">
+        <item quantity="one">%d вакансия</item>
+        <item quantity="few">%d вакансии</item>
+        <item quantity="many">%d вакансий</item>
+    </plurals>
+    <string name="title_favorites">Избранное</string>
+
+    <string name="hello_favorite_vacancy_fragment">FAVORITE VACANCY</string>
+</resources>

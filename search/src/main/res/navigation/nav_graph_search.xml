@@ -10,6 +10,9 @@
         android:name="com.example.jobsearchtw.search.presentation.search.SearchFragment"
         tools:layout="@layout/fragment_search">
         <action
+            android:id="@+id/action_searchFragment_to_searchAllVacanciesFragment"
+            app:destination="@id/searchAllVacanciesFragment" />
+        <action
             android:id="@+id/action_searchFragment_to_searchVacancyFragment"
             app:destination="@id/searchVacancyFragment" />
 
@@ -17,6 +20,15 @@
 
     <fragment
         android:id="@+id/searchVacancyFragment"
+        android:name="com.example.jobsearchtw.search.presentation.search_vacancy.SearchVacancyFragment"
+        tools:layout="@layout/fragment_search_vacancy"/>
+
+    <fragment
+        android:id="@+id/searchAllVacanciesFragment"
         android:name="com.example.jobsearchtw.search.presentation.search_all_vacancies.SearchAllVacanciesFragment"
-        tools:layout="@layout/fragment_search_all_vacancies"/>
+        tools:layout="@layout/fragment_search_all_vacancies">
+        <action
+            android:id="@+id/action_searchAllVacanciesFragment_to_searchVacancyFragment"
+            app:destination="@id/searchVacancyFragment" />
+    </fragment>
 </navigation>

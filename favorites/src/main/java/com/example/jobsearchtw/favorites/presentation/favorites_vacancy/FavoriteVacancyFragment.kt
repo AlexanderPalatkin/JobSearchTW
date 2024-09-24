@@ -1,4 +1,4 @@
-package com.example.jobsearchtw.favorites.presentation
+package com.example.jobsearchtw.favorites.presentation.favorites_vacancy
 
 import com.example.jobsearchtw.base.presentation.BaseFragment
 import com.example.jobsearchtw.favorites.databinding.FragmentFavoriteVacancyBinding

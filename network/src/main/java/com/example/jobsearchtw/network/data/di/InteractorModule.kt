@@ -1,7 +1,9 @@
 package com.example.jobsearchtw.network.data.di
 
+import com.example.jobsearchtw.core.domain.interactors.FavoritesInteractor
 import com.example.jobsearchtw.core.domain.interactors.OfferVacancyInteractor
 import com.example.jobsearchtw.core.domain.interactors.VacancyInteractor
+import com.example.jobsearchtw.core.domain.repository.FavoritesRepository
 import com.example.jobsearchtw.core.domain.repository.OfferVacancyRepository
 import com.example.jobsearchtw.core.domain.repository.VacancyRepository
 import dagger.Module
@@ -25,4 +27,10 @@ class InteractorModule {
     fun provideVacancyInteractor(
         repository: VacancyRepository
     ): VacancyInteractor = VacancyInteractor(repository)
+
+    @Provides
+    @Singleton
+    fun provideFavoritesInteractor(
+        repository: FavoritesRepository
+    ): FavoritesInteractor = FavoritesInteractor(repository)
 }

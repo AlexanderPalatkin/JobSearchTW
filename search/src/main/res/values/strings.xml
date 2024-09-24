@@ -1,8 +1,15 @@
 <resources>
-    <plurals name="vacancy_count">
+    <plurals name="search_vacancy_count">
+        <item quantity="one">Еще %d вакансия</item>
+        <item quantity="few">Еще %d вакансии</item>
+        <item quantity="many">Еще %d вакансий</item>
+        <item quantity="other">Еще %d вакансий</item>
+    </plurals>
+    <plurals name="all_vacancy_count">
         <item quantity="one">%d вакансия</item>
         <item quantity="few">%d вакансии</item>
         <item quantity="many">%d вакансий</item>
+        <item quantity="other">%d вакансий</item>
     </plurals>
     <string name="search_title_menu_text">Должность, ключевые слова</string>
     <string name="respond">Откликнуться</string>

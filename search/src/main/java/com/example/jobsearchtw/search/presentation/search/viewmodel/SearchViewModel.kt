@@ -7,8 +7,7 @@ import com.example.jobsearchtw.core.domain.model.ErrorType
 import com.example.jobsearchtw.core.domain.model.Offer
 import com.example.jobsearchtw.core.domain.model.Result
 import com.example.jobsearchtw.core.domain.model.Vacancy
-import com.example.jobsearchtw.search.presentation.search.state.SearchOffersState
-import com.example.jobsearchtw.search.presentation.search.state.SearchVacanciesState
+import com.example.jobsearchtw.search.presentation.search.state.SearchState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -20,32 +19,30 @@ import javax.inject.Inject
 class SearchViewModel @Inject constructor(
     private val interactor: OfferVacancyInteractor
 ) : ViewModel() {
+    private val _state = MutableStateFlow<SearchState>(SearchState.Start)
+    val state = _state.asStateFlow()
 
-    private val _offersState = MutableStateFlow<SearchOffersState>(SearchOffersState.Start)
-    val offersState = _offersState.asStateFlow()
-
-    private val _vacanciesState = MutableStateFlow<SearchVacanciesState>(SearchVacanciesState.Start)
-    val vacanciesState = _vacanciesState.asStateFlow()
+    private var offers: List<Offer> = emptyList()
+    private var vacancies: List<Vacancy> = emptyList()
 
     init {
-        getOffers()
-        getVacancies()
+        getData()
     }
 
-    private fun getOffers() {
-        _offersState.update { SearchOffersState.Loading }
+    private fun getData() {
+        _state.update { SearchState.Loading }
+
         viewModelScope.launch {
             interactor.getOffers().collect { result ->
                 processLoadOffers(result)
             }
-        }
-    }
 
-    private fun getVacancies() {
-        _vacanciesState.update { SearchVacanciesState.Loading }
-        viewModelScope.launch {
             interactor.getVacancies().collect { result ->
                 processLoadVacancies(result)
+            }
+
+            if (offers.isNotEmpty() && vacancies.isNotEmpty()) {
+                _state.update { SearchState.Data(offers, vacancies, vacancies.size) }
             }
         }
     }
@@ -53,11 +50,13 @@ class SearchViewModel @Inject constructor(
     private fun processLoadOffers(result: Result<List<Offer>, ErrorType>) {
         when (result) {
             is Result.Success -> {
-                _offersState.update { SearchOffersState.Data(result.data) }
+                offers = result.data
+                if (vacancies.isNotEmpty()) {
+                    _state.update { SearchState.Data(offers, vacancies, vacancies.size) }
+                }
             }
-
             is Result.Error -> {
-                _offersState.update { SearchOffersState.Error(result.error.message) }
+                _state.update { SearchState.Error(result.error.message) }
             }
         }
     }
@@ -65,11 +64,13 @@ class SearchViewModel @Inject constructor(
     private fun processLoadVacancies(result: Result<List<Vacancy>, ErrorType>) {
         when (result) {
             is Result.Success -> {
-                _vacanciesState.update { SearchVacanciesState.Data(result.data) }
+                vacancies = result.data
+                if (offers.isNotEmpty()) {
+                    _state.update { SearchState.Data(offers, vacancies, vacancies.size) }
+                }
             }
-
             is Result.Error -> {
-                _vacanciesState.update { SearchVacanciesState.Error(result.error.message) }
+                _state.update { SearchState.Error(result.error.message) }
             }
         }
     }

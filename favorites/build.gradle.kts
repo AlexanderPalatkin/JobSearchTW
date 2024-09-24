@@ -59,6 +59,7 @@ dependencies {
 
     //Modules
     implementation(project(":base"))
+    implementation(project(":common"))
     implementation(project(":core"))
     implementation(project(":network"))
     implementation(project(":uikit"))

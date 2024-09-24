@@ -1,8 +1,10 @@
 package com.example.jobsearchtw.network.data.di
 
+import com.example.jobsearchtw.core.domain.repository.FavoritesRepository
 import com.example.jobsearchtw.core.domain.repository.OfferVacancyRepository
 import com.example.jobsearchtw.core.domain.repository.VacancyRepository
 import com.example.jobsearchtw.network.data.api.ApiService
+import com.example.jobsearchtw.network.data.repository.FavoritesRepositoryImpl
 import com.example.jobsearchtw.network.data.repository.OfferVacancyRepositoryImpl
 import com.example.jobsearchtw.network.data.repository.VacancyRepositoryImpl
 import dagger.Module
@@ -24,4 +26,9 @@ class RepositoryModule {
     @Singleton
     fun provideVacancyRepository(apiService: ApiService): VacancyRepository =
         VacancyRepositoryImpl(apiService)
+
+    @Provides
+    @Singleton
+    fun provideFavoritesRepository(apiService: ApiService): FavoritesRepository =
+        FavoritesRepositoryImpl(apiService)
 }

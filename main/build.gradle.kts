@@ -59,10 +59,13 @@ dependencies {
 
     //Modules
     implementation(project(":favorites"))
+    implementation(project(":common"))
     implementation(project(":messages"))
     implementation(project(":profile"))
     implementation(project(":responses"))
     implementation(project(":search"))
     implementation(project(":uikit"))
     implementation(project(":base"))
+    implementation(project(":network"))
+    implementation(project(":core"))
 }

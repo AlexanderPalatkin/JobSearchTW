@@ -50,6 +50,9 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.2")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.4")
 
+    //Recycler
+    implementation("androidx.recyclerview:recyclerview:1.2.0-alpha05")
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -59,6 +62,7 @@ dependencies {
 
     //Modules
     implementation(project(":base"))
+    implementation(project(":common"))
     implementation(project(":core"))
     implementation(project(":network"))
     implementation(project(":uikit"))
